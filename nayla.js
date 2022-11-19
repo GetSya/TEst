@@ -227,7 +227,7 @@ const reactionMessage = { react: { text: "✉", key: nay.key}}
 nayla.sendMessage(from, reactionMessage)
 if (m.messages[0].type == "conversation" || m.messages[0].type == "extendedTextMessage") {
 try{ var text1 = m.messages[0].message.extendedTextMessage.text } catch (err) { var text1 = m.messages[0].message.conversation } 
-nayla.sendMessage(cekUser("teman", sender), {text:text1}, {quoted:{ key: {fromMe: false, participant: `${botNumber}`, ...(from ? { remoteJid: "status@broadcast" } : {})},message: {"conversation": "[ *ANONYMOUS* ] Pesan Diteruskan"}} }) 
+nayla.sendMessage(cekUser("teman", sender), {text:text1}, {quoted:{ key: {fromMe: false, participant: `${botNumber}`, ...(from ? { remoteJid: "status@broadcast" } : {})},message: {"conversation": "Teman Anda"}} }) 
 }
 if (m.messages[0].type == "imageMessage") { 
 Download("image", cekUser("teman", sender), m.messages[0].message.imageMessage.caption)
